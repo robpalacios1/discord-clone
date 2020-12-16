@@ -2,7 +2,15 @@ import React from 'react'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AddIcon from '@material-ui/icons/Add';
 import SidebarChannel from './SidebarChannel'
+import SignalCellularAltIcon from '@material-ui/icons/SignalCellularAlt'
 import './Sidebar.css'
+import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
+import CallIcon from '@material-ui/icons/Call'
+import MicIcon from '@material-ui/icons/Mic'
+import HeadsetIcon from '@material-ui/icons/Headset'
+import SettingsIcon from '@material-ui/icons/Settings'
+import { Avatar } from '@material-ui/core'
+
 
 const Sidebar = () => {
     return (
@@ -25,6 +33,35 @@ const Sidebar = () => {
                     <SidebarChannel />
                     <SidebarChannel />
                     <SidebarChannel />
+                </div>
+            </div>
+            <div className="sidebar__voice">
+                <SignalCellularAltIcon
+                    className="sidebar__voiceIcon"
+                    fontSize="large"
+                />
+                <div className="sidebar__voiceInfo">
+                    <h3>Voice Connected</h3>
+                    <p>Stream</p>
+                </div>
+
+                <div className="sidebar__voiceIcons">
+                    <InfoOutlinedIcon />
+                    <CallIcon />
+                </div>
+            </div>
+
+            <div className="sidebar__profile">
+                <Avatar />
+                <div className="sidebar__profileInfo">
+                    <h3>@robpalacios11</h3>
+                    <p>#thisIsMyID</p>
+                </div>
+
+                <div className="sidebar__profileIcons">
+                    <MicIcon />
+                    <HeadsetIcon />
+                    <SettingsIcon />
                 </div>
             </div>
         </div>
