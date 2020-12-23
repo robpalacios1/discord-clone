@@ -8,16 +8,20 @@ import EmojiEmotionsIcon from '@material-ui/icons/EmojiEmotions';
 
 /** Component */
 import ChatHeader from './ChatHeader'
+import Message from './Message';
 
 /***** CSS *****/
 import './Chat.css'
+
 
 const Chat = () => {
     return (
         <div className="chat">
             <ChatHeader />
             <div className="chat__messages">
-
+                <Message />
+                <Message />
+                <Message />
             </div>
             <div className="chat__input">
                 <AddCircleIcon fontSize="large"/>
