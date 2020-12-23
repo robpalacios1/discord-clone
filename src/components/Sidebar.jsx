@@ -1,21 +1,26 @@
 import React from 'react'
+
+/***** ICONS *****/
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AddIcon from '@material-ui/icons/Add';
 import SidebarChannel from './SidebarChannel'
 import SignalCellularAltIcon from '@material-ui/icons/SignalCellularAlt'
-import './Sidebar.css'
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
 import CallIcon from '@material-ui/icons/Call'
 import MicIcon from '@material-ui/icons/Mic'
 import HeadsetIcon from '@material-ui/icons/Headset'
 import SettingsIcon from '@material-ui/icons/Settings'
+
+/***** CSS *****/
+import './Sidebar.css'
+
+/***** Material component *****/
 import { Avatar } from '@material-ui/core'
 
 
 const Sidebar = () => {
     return (
         <div className="sidebar">
-            <h2>I am a Sidebar</h2>
             <div className="sidebar__top">
                 <h3>Roberto Palacios</h3>
                 <ExpandMoreIcon />
