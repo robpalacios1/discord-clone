@@ -63,8 +63,12 @@ const Sidebar = () => {
                     <AddIcon onClick={() => handleHandChannel()} className="sidebar__addChannel"/>
                 </div>
                 <div className="sidebar__channelsList">
-                    {channels.map((channels) => (
-                        <SidebarChannel />
+                    {channels.map(({id, channel}) => (
+                        <SidebarChannel
+                            key={id}
+                            id={id}
+                            channelName={channel.channelName}
+                        />
                     ))}
 
                 </div>
