@@ -18,7 +18,6 @@ const Login = () => {
 
     return (
         <div className="login">
-            <h2>Iam the login page</h2>
             <div className="login__logo">
                 <img
                     src="https://upload.wikimedia.org/wikipedia/sco/thumb/9/98/Discord_logo.svg/880px-Discord_logo.svg.png"
