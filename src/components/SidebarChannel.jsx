@@ -3,10 +3,13 @@ import React from 'react'
 /***** CSS *****/
 import './SidebarChannel.css'
 
-const Sidebarchannel = (props) => {
+const Sidebarchannel = ({ id, channelName }) => {
     return (
         <div className="sidebarChannel">
-            <h4><span className="sidebarChannel__hash">#</span>Youtube</h4>
+            <h4>
+                <span className="sidebarChannel__hash">#</span>
+                {channelName}
+            </h4>
         </div>
     )
 }
