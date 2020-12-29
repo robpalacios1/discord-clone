@@ -60,7 +60,7 @@ const Sidebar = () => {
                         <ExpandMoreIcon />
                         <h4>Text Channels</h4>
                     </div>
-                    <AddIcon onClick={handleHandChannel} className="sidebar__addChannel"/>
+                    <AddIcon onClick={() => handleHandChannel()} className="sidebar__addChannel"/>
                 </div>
                 <div className="sidebar__channelsList">
                     {channels.map((channels) => (
