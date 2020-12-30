@@ -28,14 +28,14 @@ const Sidebar = () => {
     const [channels, setChannels] = useState([]);
 
     useEffect(() => {
-        db.collection('channels').onSnapshot(snapshot => (
+        db.collection('channels').onSnapshot(snapshot =>
             setChannels(
                 snapshot.docs.map(doc => ({
                     id: doc.id,
                     channel: doc.data(),
                 }))
             )
-        ))
+        )
     },[])
 
     const handleHandChannel = () => {
@@ -60,7 +60,7 @@ const Sidebar = () => {
                         <ExpandMoreIcon />
                         <h4>Text Channels</h4>
                     </div>
-                    <AddIcon onClick={() => handleHandChannel()} className="sidebar__addChannel"/>
+                    <AddIcon onClick={handleHandChannel} className="sidebar__addChannel"/>
                 </div>
                 <div className="sidebar__channelsList">
                     {channels.map(({id, channel}) => (
