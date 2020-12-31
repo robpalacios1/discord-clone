@@ -7,7 +7,7 @@ import { auth, provider } from './firebase'
 import './Login.css'
 
 /***** Material Component *****/
-import { Button } from "@material-ui/icons"
+import { Button } from '@material-ui/core'
 
 const Login = () => {
 
@@ -24,7 +24,7 @@ const Login = () => {
                     alt=""
                 />
             </div>
-            <button onClick={signIn}>Sign In</button>
+            <Button onClick={signIn}>Sign In</Button>
         </div>
     )
 }
