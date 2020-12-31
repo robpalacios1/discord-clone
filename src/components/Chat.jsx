@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import firebase from 'firebase';
+import firebase from 'firebase/app';
 import { useSelector } from 'react-redux';
 import { selectChannelId, selectChannelName } from '../features/appSlice';
 import { selectUser } from '../features/userSlice'
