@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux';
 import { selectUser } from '../features/userSlice';
+import db, { auth } from './firebase';
 
 /***** ICONS *****/
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
@@ -18,8 +19,6 @@ import './Sidebar.css'
 
 /***** Material component *****/
 import { Avatar } from '@material-ui/core'
-import db, { auth } from './firebase';
-
 
 
 const Sidebar = () => {
@@ -30,7 +29,7 @@ const Sidebar = () => {
     useEffect(() => {
         db.collection('channels').onSnapshot(snapshot =>
             setChannels(
-                snapshot.docs.map(doc => ({
+                snapshot.docs.map((doc) => ({
                     id: doc.id,
                     channel: doc.data(),
                 }))
@@ -38,7 +37,7 @@ const Sidebar = () => {
         )
     },[])
 
-    const handleHandChannel = () => {
+    const handleAddChannel = () => {
         const channelName = prompt("Enter a new channel name")
 
         if (channelName) {
@@ -60,7 +59,10 @@ const Sidebar = () => {
                         <ExpandMoreIcon />
                         <h4>Text Channels</h4>
                     </div>
-                    <AddIcon onClick={handleHandChannel} className="sidebar__addChannel"/>
+                    <AddIcon
+                        onClick={handleAddChannel}
+                        className="sidebar__addChannel"
+                    />
                 </div>
                 <div className="sidebar__channelsList">
                     {channels.map(({id, channel}) => (
